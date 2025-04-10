@@ -13,15 +13,15 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from firebase_config import db
 
 # === Configuration ===
-MODEL_PATH = r"C:\Users\abdul\Desktop\webapp\pages\vosk-model-small-en-us-0.15"  # Adjust if needed
+# Resolve model path reliably
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, "vosk-model-small-en-us-0.15")
+
+if not os.path.exists(model_path):
+    st.error("❌ Vosk model not found at: " + model_path)
+else:
+    model = Model(model_path)
 SAMPLE_RATE = 16000
-
-# === Check Model ===
-if not os.path.exists(MODEL_PATH):
-    st.error("❌ Vosk model not found. Download and place it in the project folder.")
-    st.stop()
-
-model = Model(MODEL_PATH)
 q = queue.Queue()
 
 # === Page UI ===
