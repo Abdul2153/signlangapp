@@ -3,6 +3,8 @@ import requests
 from streamlit_extras.switch_page_button import switch_page
 from firebase_config import db, WEB_API_KEY
 import time
+from firebase_admin import firestore
+
 
 # Custom CSS
 st.markdown("""
