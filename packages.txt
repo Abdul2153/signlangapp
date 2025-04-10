@@ -5,3 +5,4 @@ libjpeg-dev
 libpng-dev
 libgl1
 libportaudio2
+vosk
