@@ -1,8 +1,8 @@
 import requests
-from firebase_config import web_api_key
+from firebase_config import WEB_API_KEY
 
 # Firebase Login Endpoint
-FIREBASE_LOGIN_URL = f"https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={web_api_key}"
+FIREBASE_LOGIN_URL = f"https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={WEB_API_KEY}"
 
 def login_user(email, password):
     payload = {
