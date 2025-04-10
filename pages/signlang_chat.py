@@ -40,7 +40,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("🧏 Sign Language Detection + Interview Chat")
-st.success(f"Welcome, {st.session_state['username']}!")
+st.success(f"Welcome, {st.session_state['email']}!")
 st.markdown("---")
 
 # Initialize MediaPipe
