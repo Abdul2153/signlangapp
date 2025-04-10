@@ -53,7 +53,7 @@ try:
     model_path = os.path.abspath(model_path)
     if not os.path.exists(model_path):
         raise FileNotFoundError(f"Model file not found at: {model_path}")
-    model = load_model(model_path)
+    model = load_model(model_path,compile=False)
     actions = np.array(['hello', 'mandar', 'language', 'my', 'name', 'i', 'internet', 'computer', 'data-entry', 'one', 'please'])
 except Exception as e:
     st.error(f"Error loading model: {str(e)}")
@@ -140,7 +140,7 @@ with st.sidebar:
         st.rerun()
     if st.button("← Back to Home"):
         st.session_state.webcam_active = False
-        st.switch_page("main.py")
+        st.switch_page("home")
 
 # Main app layout
 col1, col2 = st.columns([3, 1])
