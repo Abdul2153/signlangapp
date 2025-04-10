@@ -15,7 +15,7 @@ from firebase_config import db
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # 🔒 Authentication Check
-if "username" not in st.session_state:
+if "email" not in st.session_state:
     st.warning("Please login to access the app.")
     st.switch_page("main.py")
 
