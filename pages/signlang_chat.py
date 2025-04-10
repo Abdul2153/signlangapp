@@ -17,7 +17,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 # 🔒 Authentication Check
 if "email" not in st.session_state:
     st.warning("Please login to access the app.")
-    st.switch_page("login.py")
+    st.switch_page("login")
 
 # Page Settings
 st.set_page_config(
