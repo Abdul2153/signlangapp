@@ -9,5 +9,5 @@ setuptools>=65.5.0
 streamlit-extras==0.3.0
 requests
 pyttsx3
-sounddevice
+sounddevice==0.4.6
 vosk
